@@ -22,6 +22,7 @@ class AuthController extends Controller {
 							'password' => $request->password,
 					]
 			]);
+
 			return $response->getBody();
 	    } catch (BadResponseException $e){
 			return response()->json('cant login', $e->getCode());
